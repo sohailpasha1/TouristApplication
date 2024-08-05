@@ -1,0 +1,115 @@
+Test the Rest APIs through the postman:
+
+A. Register Tourist
+
+Method: POST
+
+URL: http://localhost:6990/app/tourist/registration
+
+Requestbody:
+
+{
+
+    "name": "Ronaldo",
+
+    "gender": "Male",
+
+    "age": 25,
+
+    "fromPlace": "New York",
+
+    "numberOfDaysVisits": 7,
+
+    "createdDate": "2024-08-01T00:00:00Z"
+
+}
+
+Response:
+
+{
+
+    "touristId": 1,
+
+    "name": "Ronaldo",
+
+    "gender": "Male",
+
+    "age": 25,
+
+    "fromPlace": "New York",
+
+    "numberOfDaysVisits": 7,
+
+    "createdDate": "2024-08-01T00:00:00Z"
+
+}
+
+B. Update Tourist
+
+Method: PUT
+
+URL: http://localhost:6990/app/tourist/update
+
+Requestbody:
+
+{
+
+    "touristId": 1,
+
+    "name": "Ronaldo",
+
+    "gender": "Male",
+
+    "age": 26,
+
+    "fromPlace": "New York",
+
+    "numberOfDaysVisits": 10,
+
+    "createdDate": "2024-08-01T00:00:00Z"
+
+}
+
+Response:
+
+"Updated Successfully"
+
+C. Find Tourist by Name
+
+Method: GET
+
+URL: http://localhost:6990/app/tourist/get-tourist-list-by-name?name=Ronaldo
+
+Response:
+
+[
+
+    {
+
+        "touristId": 1,
+
+        "name": "Ronaldo",
+
+        "gender": "Male",
+
+        "age": 26,
+
+        "fromPlace": "New York",
+
+        "numberOfDaysVisits": 10,
+
+        "createdDate": "2024-08-01T00:00:00Z"
+
+    }
+
+]
+
+E. Delete Tourist by ID
+
+Method: DELETE
+
+URL: http://localhost:6990/app/tourist/delete-tourist-by-id?id=1
+
+Response:
+
+"Deleted Successfully"
